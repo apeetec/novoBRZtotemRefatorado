@@ -1,0 +1,63 @@
+/*Resets do framework*/
+/*Titulos*/
+	h1,h2,h3,h4,h5,h6,p,ul li a,a,span,label,small{font-family: 'Fira Sans', sans-serif;}
+	
+/* End titulos */
+/*Espaçamentos*/
+	.space-top-bottom{padding: 70px 0px;}
+	.space-top{padding-top:70px;}
+	.space-bottom{padding-bottom: 70px;}
+	.sem-margem{margin: 0!important;}
+	.sem-padding{padding: 0!important;}
+/* End espaçamentos */
+/*Display Grid, Flex, Inline-Flex, Inline-Block, Block*/
+	.display-grid{display: grid;box-sizing: border-box;display: -webkit-grid;display: -webkit-grid;display: -ms-grid}
+	.display-flex{display: flex;box-sizing: border-box;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;}
+	.inline-block{display: inline-block;}
+	.block{display: block;}
+	.inline-flex{display: inline-flex;}
+/* End Display Grid, Flex, Inline-Flex, Inline-Block, Block*/
+/*Centralizar e Alinhar Elementos*/
+	.tudo-ao-centro{margin: 0 auto;text-align: center;}
+	.centro-forcado{margin: 0 auto;position: relative;left: 50%;transform: translateX(-50%);}/*Alinhar Centralizar forçadamente*/
+	.direita{float: right;}
+	.esquerda{float: left;}
+/*End centralizar*/
+/****Centralizar textos e parágrafos******/
+/*****************************************/
+	.texto-ao-centro{text-align: center;}/*Texto ao centro*/
+	.texto-a-direita{text-align: right;}/*Texto a direita*/
+	.texto-a-esquerda{text-align: left;}/*Texto a esquerda*/
+/**********Tirar margens e paddings************/
+/**********************************************/
+	.semmargem{margin: 0!important;}
+	.sempadding{padding: 0!important;}
+/********************Letras******************/
+/********************************************/
+	.maiscula{text-transform: uppercase;}/*Letra maiúscula*/
+	.minuscula{text-transform: lowercase;}/*Letra minúscula*/
+	.capitalize{text-transform: capitalize;}/*Primeira letra maiúscula*/
+
+
+ /******************************************************************************************************************/
+ /***************************************Desktop******************************************/
+/******************************************************************************************************************/
+@media screen and (min-width:1023px){
+
+}
+
+  /******************************************************************************************************************/
+ /***************************************Breakpoints para Tablet e Mobile******************************************/
+/******************************************************************************************************************/
+@media only screen and (min-width:767px) and (max-width:1023px){
+ /*******************************/
+/******Inicio Gryds Systems*****/
+
+
+}
+
+ /************SmarthPhone**********************/
+/*********************************************/
+@media only screen and (max-width : 767px){
+
+}

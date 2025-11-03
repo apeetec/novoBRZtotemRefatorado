@@ -1,0 +1,301 @@
+/* ========================================
+   ESTILOS PARA MAPA RESPONSIVO
+   ======================================== */
+
+.box-mapa {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.box-mapa svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ========================================
+   ESTILOS DOS ESTADOS
+   ======================================== */
+
+.state {
+    fill: #f2e300;
+    stroke: #2196F3;
+    stroke-width: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.state:hover,
+.state.highlight {
+    fill: #bbdefb;
+    stroke: #1976D2;
+    stroke-width: 2px;
+}
+
+.state-label {
+    fill: #1976D2;
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* ========================================
+   ESTILOS DAS CIDADES
+   ======================================== */
+
+.cidade-group {
+    transition: transform 0.2s ease;
+}
+
+/* .cidade-group:hover {
+    transform: scale(1.05);
+} */
+
+.marker {
+    fill: #FF5722;
+    stroke: #fff;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.marker:hover {
+    fill: #D32F2F;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.city-label {
+    fill: #424242;
+    font-size: 12px;
+    font-weight: 500;
+    pointer-events: none;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+/* ========================================
+   LINHAS CONECTORAS (ANTI-COLISÃO)
+   ======================================== */
+
+.connector-line {
+    stroke: #999;
+    stroke-width: 1px;
+    stroke-dasharray: 3,3;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.cidade-group:hover .connector-line {
+    opacity: 0.8;
+    stroke: #666;
+    stroke-width: 1.5px;
+}
+svg text.city-label {
+    opacity: 0;
+    transition: 
+ease-in-out .8s;
+}
+/* ========================================
+   TOOLTIP
+   ======================================== */
+
+.tooltip {
+    position: absolute;
+    background: rgba(33, 33, 33, 0.95);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   RESPONSIVIDADE - BREAKPOINTS
+   ======================================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .box-mapa {
+        min-height: 350px;
+    }
+    
+    .state-label {
+        font-size: 12px;
+    }
+    
+    .city-label {
+        font-size: 10px;
+    }
+    
+    .marker {
+        r: 6;
+    }
+    
+    .marker:hover {
+        r: 8;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .box-mapa {
+        min-height: 300px;
+    }
+    
+    .state-label {
+        font-size: 10px;
+    }
+    
+    .city-label {
+        font-size: 9px;
+    }
+    
+    .marker {
+        r: 5;
+    }
+    
+    .marker:hover {
+        r: 7;
+    }
+    
+    .tooltip {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+}
+
+/* Smartphones muito pequenos */
+@media (max-width: 320px) {
+    .box-mapa {
+        min-height: 250px;
+    }
+    
+    .state-label {
+        font-size: 9px;
+    }
+    
+    .city-label {
+        display: none; /* Oculta labels das cidades em telas muito pequenas */
+    }
+    
+    .marker {
+        r: 4;
+    }
+    
+    .marker:hover {
+        r: 6;
+    }
+}
+
+/* ========================================
+   MODO ESCURO (OPCIONAL)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+    .state {
+        fill: #263238;
+        stroke: #37474F;
+    }
+    
+    .state:hover,
+    .state.highlight {
+        fill: #37474F;
+        stroke: #546E7A;
+    }
+    
+    .state-label {
+        fill: #90A4AE;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    
+    .city-label {
+        fill: #CFD8DC;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    }
+}
+
+/* ========================================
+   ANIMAÇÕES E TRANSIÇÕES
+   ======================================== */
+
+.state,
+.marker,
+.cidade-group {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animação de carregamento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box-mapa svg {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* ========================================
+   ESTADOS DE LOADING
+   ======================================== */
+
+.box-mapa.loading {
+    position: relative;
+}
+
+.box-mapa.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #2196F3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 100;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   ACESSIBILIDADE
+   ======================================== */
+
+.state:focus,
+.marker:focus {
+    outline: 2px solid #2196F3;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .state,
+    .marker,
+    .cidade-group,
+    .box-mapa svg {
+        transition: none;
+        animation: none;
+    }
+}

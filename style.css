@@ -1,0 +1,325 @@
+ /*
+Theme Name: (Novo tema 2)
+*/
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    strong {font-weight: 800 !important;}
+    ul, ol {padding: 0!important;list-style: none;}
+    .container{width: 100%!important;}
+    .no-gap{grid-gap: 0!important;}
+    .custom-content{padding: 4rem;}
+    .full-height{height: 100%;}
+    .full-height.carousel,.full-height-carousel-tabs-content .tabs-content{height: 100%!important;}
+    .overflow-Y-auto{overflow-y: auto;}
+    .modal .modal-content{padding: 0!important;}
+    .box-title-custom {padding-top: 4rem;border-bottom: 2px solid #f2e400;padding-bottom: 20px;padding-left: 4rem;}
+    .logo-sonhos {position: absolute;top: 0;max-width: 85px;right: 0;}
+    .box-title h1,.box-title h2,.box-title h3,.box-title h4,.box-title h5,.box-title h6 {font-weight: bold;text-transform: uppercase;}
+    .bar-top {transform: translateY(-50%);top: 50%;position: absolute;height: 256px;width: 10px;left: 0;}
+    .relative {position: relative;}
+    .logo-praticas {max-width: 284px;width: 100%;object-fit: contain;margin-bottom: 70px;}
+    .state {fill: #f2e300;stroke: #fff;stroke-width: 0.5;}
+    .marker {fill: #92928f;stroke: white;stroke-width: 1px;}
+    .tabs .indicator{display: none!important;}
+    iframe{height: 100%;width: 100%;border: none;}
+    .side-image{height: 100%;width: 100%;object-fit: cover;}
+    .full-responsive-img{display: block;width: 100%;height: 100%;object-fit: cover;}
+    .zoomBtn {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+/* Painel da página principal e das categorias */
+    .painel-home{display: grid;grid-template-rows: 100px 1fr 40px;height: 100dvh;}
+    .top{background-color: #515151;position: relative;padding: 10px 0;border-bottom: 10px solid #f2e300;display: flex;align-items: center;justify-content: center;}
+    .top .box-logo {position: absolute;right: 50px;transform: translateY(-50%);top: 50%;max-width: 120px;width: 100%;display: flex;height: 100%;align-items: center;}
+    .top .box-logo img{display: block;width: 100%;object-fit: contain;height: 80px;}
+    .footer{background-color: #f2e300;}
+    .home #institucional {max-height: 100%;height: 100%;width: 100%;}
+    .custom-btn{color: #fff;padding: 10px;display: flex;align-items: center;gap: 10px;}
+    .custom-btn span{height: 6px;width: 6px;display: block;}
+    .flex-buttons-floating {position: fixed;bottom: 40px;left: 8.4%;}
+    .side-img-excelencia{display: block;width: 100%;object-fit: cover;height: 100%;}
+    #institucional .custom-content .logo {position: absolute;max-width: 150px;width: 100%;display: block;bottom: 0;}
+    .floating-next-prev {position: absolute;z-index: 2;display: flex;flex-direction: column;gap: 20px;right: 40px;bottom: 40px;}
+    .close-modal {position: absolute;top: 10px;z-index: 2;left: 10px;background-color: #f2e400 !important;color: #424242 !important;}
+    /* Break point */
+    @media only screen and (max-width: 992px) {
+        #institucional .item .logo {
+            max-width: 104px;
+            position: relative;
+            margin-top: 40px;
+        }
+    }
+/* Taxonomia das cidades*/
+.lista-de-empreendimentos {width: 100%;background-color: #92928f;padding: 2rem;position: relative;height: 100%;}
+.back-home {position: absolute;right: 0;top: 0;color: #fff;font-size: 20px;transition: ease-in-out .8s;padding: 15px;}
+.lista-de-empreendimentos figure {max-width: 81%;width: 100%;display: block;margin: 45px auto;position: relative;}
+.lista-de-empreendimentos figure a {position: absolute;height: 100%;width: 100%;z-index: 1;}
+.lista-de-empreendimentos figure img {width: 100%;height: 180px;display: block;object-fit: cover;position: relative;right: -18px;top: -22px;}
+.lista-de-empreendimentos figure figcaption {padding: 0 2rem 22px 2rem;}
+.lista-de-empreendimentos figure figcaption .title {font-weight: 600;text-transform: uppercase;font-size: 12px;}
+.lista-de-empreendimentos figure figcaption span {display: block;color: #000;}
+.col.l4 img {width: 100%;}
+.tax-cidades .painel-home .row {height: 100%;}
+/* Estilização do empreendimento */
+.painel-single {display: grid;grid-template-rows: 450px 1fr;background-color: #fff;padding-bottom: 70px;}
+.painel-single .banner {height: 100%;}
+.painel-single .banner img {width: 100%;height: 100%;display: block;object-fit: cover;}
+.painel-single .gradient img {width: 100%;display: block;}
+.box-logo-main {padding: 1rem;margin: 0 auto;}
+.box-logo-main img {width: 100%;display: block;}
+.box-buttons-modals {padding: 3rem;}
+.box-buttons-modals .btn{background-color: transparent;color: #000;border: 1px solid #000;max-width: 320px;width: 100%;gap: 20px;}
+.box-buttons-modals .btn span.button-marker {display: block;width: 10px;height: 10px;background-color: #000;}
+.single-window {max-height: 100% !important;height: 100%;width: 100% !important;}
+.side-box{padding: 2rem;}
+.logo-box{padding: 2rem;}
+.logo-box img {width: 100%;height: 100%;display: block;object-fit: contain;max-width: 250px;margin: 0 auto;}
+.empreendimentos-template-default .tabs-container .btn {box-shadow: none;color: #000;border: 1px solid #000;display: flex;align-items: center;width: 100%;gap: 0 20px;font-weight: 400;margin-top: 20px;text-transform: uppercase;flex-direction: row!important;padding: 0 14px!important;}
+.empreendimentos-template-default .tabs-container .btn .marker, .empreendimentos-template-default .tabs-container .btn .custom-marker {display: block;width: 10px;height: 10px;background-color: #000;}
+#foto-aerea .item, #mapa_satelite .item {height: 100%;}
+#foto-aerea img, #mapa_satelite img {width: 100%;height: 100%;display: block;}
+.window-close button{width: 100%;border-radius: 0;}
+.tabs-container{display: flex;flex-direction: column;}
+.list-icons-diferenciais-lazer span{margin-top: 15px;display: block;}
+.list-icons-diferenciais-lazer p,#tab-empreendimento{color: #fff;}
+.list-confort{margin-top: 40px;}
+.list-confort li.flex {display: flex;gap: 0 20px;color: #fff;margin-top: 30px;text-transform: uppercase;align-items: flex-start;}
+.list-confort li.flex p{margin: 0;padding: 0;}
+.list-confort li img {max-width: 35px;width: 100%;display: block;object-fit: contain;}
+.tabs-gallery{display: grid;grid-template-columns: repeat(2,1fr);gap: 10px;}
+.tabs-gallery li{height: 90px;overflow: hidden;width: 100%;}
+.tabs-gallery li a{width: 100%;height: 100%;display: block;padding: 0!important;margin: 0!important;}
+.tabs-gallery li img{width: 100%;height: 100%;object-fit: cover;display: block;transition: ease-in-out .8s;}
+.tabs-gallery li img:hover{transform: scale(1.1);}
+.side-infos{position: relative;}
+.side-infos:before {
+    content: '';
+    height: 100%;
+    width: 10px;
+    background: linear-gradient(to bottom, #ffffff, #ffff00, #ffcc00, #ff9900, #ff6600, #ff3300, #ff0000);
+    position: absolute;
+    right: 0;
+}
+@media only screen and (max-width: 600px) {
+    .painel-single {grid-template-rows: 300px 1fr;}
+    .box-buttons-modals {padding: 1rem;}
+    .box-buttons-modals .btn {max-width: 100%;}
+    .tabs-gallery {grid-template-columns: 1fr 1fr;gap: 10px;display: grid !important;}
+}
+#imagens .full-height{position: relative;}
+.wp-video{height: 100%!important;}
+#videos .wp-video-shortcode{height: 100%!important; width: 100%!important; display: block;}
+.sub-title{padding: 1rem 1rem 1rem 4rem;}
+.box-lazer{display: grid;grid-template-columns: 1fr 1fr;grid-gap: 10px;}
+.box-lazer li{display: grid;grid-template-columns: 40px auto;align-items: center;grid-gap: 10px;}
+.box-lazer figure{width: 100%;margin: 0;}
+.box-lazer figure img{width: 100%;object-fit: contain;height: auto;}
+.banner-top {height: 250px;}
+.banner-top img {height: 100%;object-fit: cover;display: block;width: 100%;}
+@media only screen and (max-width: 600px) {
+    .box-logo-main{width: 100%;}
+    .box-logo-main img {object-fit: contain;max-width: 250px;margin: 0 auto;}
+        .mobile-row {grid-template-rows: auto 1fr;}
+}
+
+/* ========================================
+   SISTEMA DE LOADING - MAPA
+   ======================================== */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-out;
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-content {
+    text-align: center;
+    max-width: 400px;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f2e400;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f0f0f0;
+    border-top: 4px solid #f2e400;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+#loading-message {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.progress-container {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f2e400, #e6d600);
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+#progress-text {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.loading-details {
+    text-align: left;
+}
+
+.loading-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
+}
+
+.step-indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.8rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.step-indicator.pending {
+    background: #f0f0f0;
+    color: #999;
+    border: 2px solid #ddd;
+}
+
+.step-indicator.loading {
+    background: #f2e400;
+    color: #333;
+    border: 2px solid #f2e400;
+    animation: pulse 1.5s infinite;
+}
+
+.step-indicator.completed {
+    background: #28a745;
+    color: white;
+    border: 2px solid #28a745;
+}
+
+.step-indicator.completed::before {
+    content: '✓';
+    font-size: 0.9rem;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.step-label {
+    color: #666;
+    flex: 1;
+}
+
+.loading-step .step-indicator.loading + .step-label {
+    color: #333;
+    font-weight: 500;
+}
+
+.loading-step .step-indicator.completed + .step-label {
+    color: #28a745;
+    font-weight: 500;
+}
+
+/* Responsivo */
+@media only screen and (max-width: 600px) {
+    .loading-content {
+        max-width: 300px;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    #loading-title {
+        font-size: 1.1rem;
+    }
+    
+    .loading-step {
+        font-size: 0.8rem;
+    }
+}
